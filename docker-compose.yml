@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  console:
+    build:
+      context: docker/php
+      args:
+        UID: 3000
+    container_name: console
+    volumes:
+      - ./:/app
+    working_dir: /app
